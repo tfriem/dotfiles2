@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	email = 4568372+tfriem@users.noreply.github.com
+	name = Tobias Friemel
+[core]
+	editor = /usr/bin/nvim

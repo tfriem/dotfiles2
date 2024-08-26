@@ -1,0 +1,31 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
+- clean: ["~"]
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - command: if [ "$SHELL" != $(which zsh) ]; then chsh -s $(which zsh); fi
+      stdin: true
+      stdout: true
+      stderr: true
+      description: Making zsh the default shell
+    - [fzf/install --all, Installing fzf]
+    - [curl -s "https://get.sdkman.io" | bash, Installing sdkman]
+
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.oh-my-zsh: ohmyzsh
+    ~/.oh-my-zsh/custom/plugins/zsh-nvm: zsh-nvm
+    ~/.oh-my-zsh/custom/themes/powerlevel10k: powerlevel10k
+    ~/.zshrc: zshrc
+    ~/.p10k.zsh: p10k.zsh
+    ~/.config/bat/config: bat.config
+    ~/.tmux.conf: ohmytmux/.tmux.conf
+    ~/.tmux.conf.local: tmux.conf.local
+    ~/.SpaceVim: SpaceVim
+    ~/.SpaceVim.d/init.toml: spacevim.toml
+    ~/.vim: SpaceVim
+    ~/.config/nvim: SpaceVim
