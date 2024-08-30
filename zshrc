@@ -29,8 +29,8 @@ HYPHEN_INSENSITIVE="true"
 
 COMPLETION_WAITING_DOTS="true"
 
-# ZSH_TMUX_AUTOSTART="true"
-# ZSH_TMUX_AUTOCONNECT="false"
+ZSH_TMUX_AUTOSTART="true"
+ZSH_TMUX_AUTOCONNECT="false"
 
 source ~/.oh-my-zsh/oh-my-zsh.sh
 
